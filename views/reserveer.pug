@@ -1,0 +1,54 @@
+extends layout
+
+block content
+  header.w3-display-container.w3-content.w3-wide
+  .w3-content(style='max-width=1600px')
+    h1.w3-center.w3-xxLarge Reservatie
+    br
+    h2.w3-center.w3-medium(style='max-width:1000px')
+      form(method='POST' action='')
+        div.form-group
+          table(style='width:100%')
+            tr
+              td#lefttable Voornaam:
+              td#righttable
+                input#name.form-control(type='text' name='voornaam' required='true')
+            tr
+              td#lefttable Achternaam:
+              td#righttable
+                input#name.form-control(type='text' name='achternaam' required='true')
+            tr
+              td#lefttable EMAIL:
+              td#righttable
+                input#name.form-control(type='text' name='email' required='true')
+            tr
+              td#lefttable Aantal volwassenen kalkoenfilet (&euro;17):
+              td#righttable
+                input#name.form-control(type='text' name='volwassen_kalkoen' required='true' placeholder='(aantal >= 0)')
+            tr
+              td#lefttable Aantal volwassenen beenhesp (&euro;17):
+              td#righttable
+                input#name.form-control(type='text' name='volwassen_beenhesp' required='true' placeholder='(aantal >= 0)')
+            tr
+              td#lefttable Aantal volwassenen kaaskroket (&euro;15):
+              td#righttable
+                input#name.form-control(type='text' name='volwassen_kaas' required='true' placeholder='(aantal >= 0)')
+            tr
+              td#lefttable Aantal kinderen kalkoenfilet ( &lt; 12 jaar) (&euro;10):
+              td#righttable
+                input#name.form-control(type='text' name='kind_kalkoen' required='true' placeholder='(aantal >= 0)')
+            tr
+              td#lefttable Aantal kinderen beenhesp ( &lt; 12 jaar) (&euro;10):
+              td#righttable
+                input#name.form-control(type='text' name='kind_beenhesp' required='true' placeholder='(aantal >= 0)')
+            tr
+              td#lefttable Aantal kinderen kaaskroket ( &lt; 12 jaar) (&euro;8):
+              td#righttable
+                input#name.form-control(type='text' name='kind_kaas' required='true' placeholder='(aantal >= 0)')
+          input(type='submit' value='Verzenden')
+    h2.w3-center.w3-small.w3-text-red(style='max-width:1000px')
+      if errors
+        table(style='width:100%')
+          for error in errors
+            tr
+              td!= error.msg

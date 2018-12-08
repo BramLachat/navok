@@ -1,0 +1,33 @@
+extends layout
+
+block content
+	header.w3-display-container.w3-content.w3-wide
+		h1= title
+		ul
+			li #[ Aantal personen ingeschreven:] !{data.persoon_count}
+		ul
+			each waarde in data.volwassen_kalkoenfilet_count
+				li #[ Aantal volwassenen kalkoenfilet:] !{waarde.aantal}
+		ul
+			each waarde in data.volwassen_beenhesp_count
+				li #[ Aantal volwassenen beenhesp:] !{waarde.aantal}
+		ul
+			each waarde in data.volwassen_kaaskroket_count
+				li #[ Aantal volwassenen kaaskroket:] !{waarde.aantal}
+		ul
+			each waarde in data.kind_kalkoenfilet_count
+				li #[ Aantal kinderen kalkoenfilet:] !{waarde.aantal}
+		ul
+			each waarde in data.kind_beenhesp_count
+				li #[ Aantal kinderen beenhesp:] !{waarde.aantal}
+		ul
+			each waarde in data.kind_kaaskroket_count
+				li #[ Aantal kinderen kaaskroket:] !{waarde.aantal}
+		h1 Emailadressen:
+		ul
+			each email in data.persoon_email
+				li #[ Email:] !{email.email}
+		form(method='POST' action='')
+			div.form-group
+				input#email.form-control(type='text', name='email', required='true', placeholder='emailadres')
+			button.btn.btn-primary(type='submit') Delete persoon
