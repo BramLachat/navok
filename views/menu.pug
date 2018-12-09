@@ -1,55 +1,31 @@
 extends layout
 
 block content
-  <header class="w3-display-container w3-content w3-wide">
-    <div class="w3-content" style="max-width=1600px">
-      <h1 class="w3-center w3-xxLarge">Menu</h1><br>
-      <h2 class="w3-center w3-medium" style="max-width:1000px">
-      <table style="width:100%">
-        <tr>
-          <td>Beenhesp (Breydelham)</td>
-          <td>Kalkoenfilet</td>
-          <td>Kaaskroketten</td>
-        </tr>
-        <tr>
-          <td><img class="w3-image" src="images/beenham.png" width="300" heigth="200"></td>
-          <td><img class="w3-image" src="images/kalkoenfilet.png" width="300" heigth="200"></td>
-          <td><img class="w3-image" src="images/kaaskroket.png" width="300" heigth="200"></td>
-        </tr>
-      </table>
-      </h2>
-      <br>
-      <br>
-      <h1 class="w3-center w3-xxLarge">Drankkaart</h1>
-      <h2 class="w3-center w3-medium" style="max-width:1000px">
-
-      <script src=/javascripts/getPrijzenlijst.js></script>
-
-      <div id=prijzen class="w3-center">
-       <table>
-        <button class = "w3-right" type="button" onclick="getPrijzenlijst()">Geef prijzen</button>
-        <br>
-        <br>
-        <tr>Cava</tr><br>
-        <tr>Witte wijn</tr><br>
-        <tr>Rode wijn</tr><br>
-        <tr>Witte porto</tr><br>
-        <tr>Rode porto</tr><br>
-        <tr>Cola</tr><br>
-        <tr>Cola Zero</tr><br>
-        <tr>Limonade</tr><br>
-        <tr>Ice Tea</tr><br>
-        <tr>Spa bruis</tr><br>
-        <tr>Spa plat</tr><br>
-        <tr>Carlsberg</tr><br>
-        <tr>Jupiler</tr><br>
-        <tr>Leffe Blond</tr><br>
-        <tr>Koffie</tr><br>
-      </table>
-      </div>
-      </h2>
-    </div>
-  </header>
-    
-
-  </div>
+  header.w3-display-container.w3-content.w3-wide
+  .w3-content(style='max-width=1600px')
+    h1.w3-center.w3-xxLarge Menu
+    br
+    h2.w3-center.w3-medium(style="max-width:1000px")
+    div.w3-center Ook dit jaar kan u genieten van onze heerlijke beenhesp en kalkoenfilet, maar dit jaar hebben we nog een derde gerecht voorzien: kaaskroketten!
+    br
+    br
+    table(style='width:100%')
+      tr
+        td.w3-center Beenhesp (Breydelham)
+        td.w3-center Kalkoenfilet
+        td.w3-center Kaaskroketten
+      tr
+        td
+          img.w3-image(src='images/beenham3.png', width='300', heigth='200')
+        td
+          img.w3-image(src='images/kalkoenfilet.png', width='300', heigth='200')
+        td
+          img.w3-image(src='images/kaaskroket.png', width='300', heigth='200')
+    br
+    br
+    h2.w3-center.w3-medium(style='max-width:1000px')
+      div.w3-center Hier ziet u ook ons groot assortiment dranken
+      br
+      #prijzen
+        input.w3-center(type='button', value='Toon drankkaart', onclick='getPrijzenlijst()')
+      script(src='/javascripts/getPrijzenlijst.js')
