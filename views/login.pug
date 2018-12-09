@@ -1,38 +1,33 @@
 extends layout
 
 block content
-    <header class="w3-display-container w3-content w3-wide ">
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <h1 class="w3-center w3-padding-large">
-    <div>Login</div>
-    <form action="/login" method="post">
-    <table class="w3-medium" style="width:100%;">
-      <tr>
-        <td id="lefttable"><label>Username:</label></td>
-        <td id="righttable"><input type="text" name="username" required="true"/></td>
-      </tr>
-      <div class="w3-medium">
-      <tr>
-        <td id="lefttable"><label>Password:</label></td>
-        <td id="righttable"><input type="password" name="password" required="true"/></td>
-      </tr>
-      </div>
-      <br/>
-      <div class="w3-large">
-      <tr>
-        <td colspan="2"><input type="submit" value="Aanmelden"/></td>
-      </tr>
-      </div>
-    </table>
-    </form>
-    </h1>
-    </header>
-    </div>
+	header.w3-display-container.w3-content.w3-wide
+		br
+		br
+		br
+		br
+		br
+		br
+		br
+		br
+		br
+		h1.w3-center.w3-padding-large
+		div Login
+		form(action='/login', method='post')
+		table.w3-medium(style='width:100%;')
+			tr
+				td#lefttable
+					label Username:
+				td#righttable
+					input(type='text', name='username', required='true')
+			.w3-medium
+			tr
+				td#lefttable
+					label Password:
+				td#righttable
+					input(type='password', name='password', required='true')
+		br
+		.w3-large
+		tr
+			td(colspan='2')
+				input(type='submit', value='Aanmelden')
