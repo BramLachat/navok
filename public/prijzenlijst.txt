@@ -7,8 +7,8 @@ Rode porto...............3,50 euro <br>
 Cola.....................1,80 euro <br>
 Cola zero................1,80 euro <br>
 Limonade.................1,80 euro <br>
-Ice Tea..................1,80 euro <br>
-Spa bruis................2,00 euro <br>
+Ice Tea..................2,00 euro <br>
+Spa bruis................1,80 euro <br>
 Spa plat.................1,80 euro <br>
 Jupiler..................1,80 euro <br>
 Carlsberg................2,50 euro <br>
