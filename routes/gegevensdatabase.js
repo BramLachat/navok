@@ -40,7 +40,7 @@ router.get('/', function(req, res, next) {
 router.post('/', function(req, res, next) {
 	async.parallel({
         persoon: function(callback) {
-          Persoon.find().where('email').equals(req.body.email).exec(callback);
+          Persoon.find().where('email').equals(req.body.email).exec(callback)
         },
     }, function(err, results) {
 		if (err) { return next(err); }
