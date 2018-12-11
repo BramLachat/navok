@@ -19,7 +19,7 @@ router.get('/', function(req, res, next) {
 router.post('/', [
    
     // Validate that the name field is not empty.
-    body('voornaam', 'Gelieve uw voornaam in te vullen!').isLength({ min: 1 }).trim().isAlpha().withMessage('Voornaam bevat niet toegelaten karakters!'),
+    body('voornaam', 'Gelieve uw voornaam in te vullen!').isLength({ min: 1 }).trim().isAlpha(['de-DE', 'en-GB', 'fr-FR']).withMessage('Voornaam bevat niet toegelaten karakters!'),
 	body('achternaam', 'Gelieve uw achternaam in te vullen!').isLength({ min: 1 }).trim().isAscii().withMessage('Achternaam bevat niet toegelaten karakters!'),
 	body('email').isLength({ min: 1 }).trim().withMessage('Gelieve uw emailadres in te vullen!').isEmail().withMessage('Dit is geen correct emailadres!'),
     body('volwassen_kalkoen').trim().isInt({min:0}).withMessage('Het aantal dat u heeft ingegeven is niet geldig!'),
